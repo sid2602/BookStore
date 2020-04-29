@@ -1,12 +1,19 @@
 import React, {useState} from 'react';
 import {Nav,WrapperNavigation,Input} from './Navigation.css'
 
-const Navigation = () => {
+import {connect} from 'react-redux';
+
+import {getAllBooks} from '../../data/operations/fetchBooks'
+
+const Navigation = ({getAllBooks}) => {
+
+
     const [value,setValue] = useState("");
+
 
     const handleSubmit = e =>{
         e.preventDefault()
-        console.log(value)
+        getAllBooks(value);
     }
 
     const handleInput = e =>{
@@ -25,8 +32,14 @@ const Navigation = () => {
      );
 }
 
+const mapDispatchToProps = dispatch =>({
+    getAllBooks: (item)=>dispatch(getAllBooks(item))
+  })
+  
 
+  
+  const ConectedApp = connect(null,mapDispatchToProps)(Navigation);
 
 
  
-export default Navigation;
+export default ConectedApp;
