@@ -1,18 +1,38 @@
-import React from 'react';
+import React , {useEffect}  from 'react';
 
-import { ThemeProvider } from 'styled-components'
-import theme from './utils/theme'
-import GlobalStyle from './utils/GlobalStyles.css';
+import {connect} from 'react-redux';
+import {getAllBooks} from './data/operations/fetchBooks'
 
-function App() {
+import Navigation from './components/navigation';
+
+
+function App({Books,getAllBooks}) {
+  
+  
+  // SearchBooks("Anna");
+  useEffect(()=>{
+    getAllBooks("Alicja")
+  },[])
+
+  console.log(Books);
   return (
-    <ThemeProvider theme = {theme}>
-      <GlobalStyle/>
+     
       <div className="App">
-        cosdsadsa
+        <Navigation/>
       </div>
-    </ThemeProvider>
+    
   );
 }
 
-export default App;
+
+const mapDispatchToProps = dispatch =>({
+  getAllBooks: (item)=>dispatch(getAllBooks(item))
+})
+
+const mapStateToProps = (state) =>({
+  Books : state.Books
+})
+
+const ConectedApp = connect(mapStateToProps,mapDispatchToProps)(App);
+
+export default ConectedApp;

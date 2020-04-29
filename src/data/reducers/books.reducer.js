@@ -8,16 +8,35 @@ import {
 
 const initialState = {
     "totalItems": 0,
-    items: []
-
+    items: [],
+    loading: false,
+    error: ''
 }
 
  const Books =(state= initialState,action) => {
     switch(action.type){
+
+        case BOOKS_GET_REQUEST:
+            return {
+                ...state,
+                loading:true,
+                error: '',
+            }
+
         case BOOKS_GET_SUCCESS:
         return{
             ...state,
-            items: action.items
+            items: action.items,
+            loading:false,
+            error: ''
+        }
+
+        case BOOKS_GET_FAILURE:
+        return{
+            ...state,
+            items: [],
+            loading: false,
+            error: action.error
         }
 
         default:

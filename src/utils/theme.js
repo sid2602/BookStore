@@ -5,6 +5,14 @@ export default{
         sm: 10,
         xl: 20,
     },
+    fontSize:{
+        xs:10,
+        sm:15,
+        xl:20,
+    },
+
+
+    
     colors: {
         gray:{
             light: 'rgb(238,238,238)',

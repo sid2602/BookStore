@@ -8,6 +8,10 @@ import { normalize } from 'styled-normalize'
         box-sizing: border-box;
     }
 
+    body{
+        background-image: url("witewall_3.png");
+    }
+
     ul{
         list-style-type: none;
     }
