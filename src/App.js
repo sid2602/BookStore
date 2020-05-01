@@ -1,18 +1,21 @@
-import React , {useEffect}  from 'react';
-
+import React  from 'react';
 import Navigation from './components/navigation';
-
+import Main from './components/main';
 
 function App() {
   
   
   return (
      
-      <div className="App">
+      <div className = "App">
         <Navigation/>
+        <Main/>
       </div>
     
   );
 }
+
+
+
 
 export default App;

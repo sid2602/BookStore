@@ -23,9 +23,10 @@ const Navigation = ({getAllBooks}) => {
 
     return ( 
         <Nav>
+            
             <WrapperNavigation>
                 <form onSubmit={handleSubmit}>
-                    <Input type="text" placeholder="search for the books" value={value} onChange = {handleInput}/>
+                    <Input type="text" placeholder="Search for the books" value={value} onChange = {handleInput}/>
                 </form>
             </WrapperNavigation>
         </Nav>
@@ -33,10 +34,9 @@ const Navigation = ({getAllBooks}) => {
 }
 
 const mapDispatchToProps = dispatch =>({
-    getAllBooks: (item)=>dispatch(getAllBooks(item))
+    getAllBooks: (item) => dispatch(getAllBooks(item))
   })
   
-
   
   const ConectedApp = connect(null,mapDispatchToProps)(Navigation);
 

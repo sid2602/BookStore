@@ -10,25 +10,39 @@ export default{
         sm:15,
         xl:20,
     },
-
-
+    size: {
+        mobileS: '320px',
+        mobileM: '375px',
+        mobileL: '425px',
+        tablet: '768px',
+        laptop: '1024px',
+        laptopL: '1440px',
+        desktop: '2560px',
+      },
+    widthSize: {
+        mobileS: '420px',
+        mobileM: '475px',
+        mobileL: '625px',
+        tablet: '868px',
+        laptop: '1124px',
+    },
+    percentSize:{
+        xl: "70",
+        l: "45",
+        m: '32',
+        s: '24',
+        xs: '17',
+    },
     
     colors: {
-        gray:{
-            light: 'rgb(238,238,238)',
-            normal: 'rgb(222,220,220)',
-            dark: 'rgb(212,212,212)',
+        martimi: "#021859",
+        blue: {
+            light: "#0433BF",
+            normal: "#032CA6",
+            dark: "#021859",
         },
-        green:{
-            normal:'rgb(85,150,0)',
-        },
-        red:{
-            normal: 'rgb(165,61,54)',
-        },
-        pink:{
-            normal: 'rgb(219,112,147)',
-            dark: 'rgb(199,92,127)',
-        },
+        pink: "#F25CA2"   
+        
     },
 
 }

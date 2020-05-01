@@ -5,9 +5,10 @@ import Wrapper from '../wrapper/Wrapper.css'
 export const Nav =  styled.nav`
     width:100%;
     height: 10vh;
-    position:fixed;
-    background-color: rgb(240,239,238);
-    border-bottom: 2px solid black;
+    
+    background-color: ${({theme})=>theme.colors.blue.normal};
+    border-bottom: 2px solid ${({theme})=>theme.colors.blue.dark};
+    dispaly: block;
     
 `;
 
@@ -24,8 +25,12 @@ export const Input = styled.input`
     padding-right: 10px;
     height: 40px;
     border: none;
-    border-bottom: 2px solid black;
-    font-size: ${props => props.theme.fontSize.xl}px;
-    text-transform: uppercase;
+    border-bottom: 2px solid ${({theme}) => theme.colors.pink};
+    font-size: ${({theme}) => theme.fontSize.xl}px;
+    color:white;
     background-color: transparent;
+
+    &::placeholder{
+        color: white;
+    }
 `;

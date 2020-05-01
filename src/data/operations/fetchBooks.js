@@ -15,9 +15,12 @@ export const getAllBooks = (tekst) =>
 
         try{
             const books = await fetchBooks(tekst);
+           
+            
             dispatch(Success(books.items))
         }catch(error){
-            dispatch(Failure(error))
+            
+            dispatch(Failure(true))
         }
         
     }

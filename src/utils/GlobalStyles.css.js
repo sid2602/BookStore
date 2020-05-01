@@ -6,10 +6,11 @@ import { normalize } from 'styled-normalize'
 
     *{
         box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
     }
 
     body{
-        background-image: url("witewall_3.png");
+        background-image: url("bgc.jpg");
     }
 
     ul{

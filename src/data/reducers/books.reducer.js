@@ -10,7 +10,7 @@ const initialState = {
     "totalItems": 0,
     items: [],
     loading: false,
-    error: ''
+    error: false
 }
 
  const Books =(state= initialState,action) => {
@@ -20,7 +20,7 @@ const initialState = {
             return {
                 ...state,
                 loading:true,
-                error: '',
+                error: false,
             }
 
         case BOOKS_GET_SUCCESS:
@@ -28,7 +28,7 @@ const initialState = {
             ...state,
             items: action.items,
             loading:false,
-            error: ''
+            error: false
         }
 
         case BOOKS_GET_FAILURE:
