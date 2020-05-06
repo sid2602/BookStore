@@ -83,8 +83,7 @@ export const Book = styled.div`
 
 
 export const Button = styled.button`
-    width: 50%;
-    height: 15%;
+    padding: 12px 40px;
     border: 2px solid white;
     position: absolute;
     left: 50%;
@@ -94,7 +93,7 @@ export const Button = styled.button`
     color: white;
     opacity: 0;
     transition: 0.2s;
-   
+   border-radius: 10px;
 
 
     &:hover{

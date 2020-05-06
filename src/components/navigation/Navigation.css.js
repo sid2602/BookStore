@@ -17,6 +17,10 @@ export const WrapperNavigation = styled(Wrapper)`
     justify-content: center;
     align-items: center;
     height:100%;
+
+    @media (max-width: ${({theme})=> theme.size.mobileL}){
+        width: 100%;
+    }
 `;
 
 export const Input = styled.input`
@@ -32,5 +36,9 @@ export const Input = styled.input`
 
     &::placeholder{
         color: white;
+    }
+
+    @media (max-width: ${({theme})=> theme.size.mobileL}){
+        width: 300px;
     }
 `;

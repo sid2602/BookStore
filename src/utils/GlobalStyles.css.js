@@ -11,6 +11,7 @@ import { normalize } from 'styled-normalize'
 
     body{
         background-image: url("bgc.jpg");
+        overflow: hidden;
     }
 
     ul{
