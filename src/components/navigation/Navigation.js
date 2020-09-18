@@ -1,45 +1,42 @@
-import React, {useState} from 'react';
-import {Nav,WrapperNavigation,Input} from './Navigation.css'
+import React, { useState } from "react";
+import { Nav, WrapperNavigation, Input } from "./Navigation.css";
 
-import {connect} from 'react-redux';
+import { connect } from "react-redux";
 
-import {getAllBooks} from '../../data/operations/fetchBooks'
+import { getAllBooks } from "../../data/operations/fetchBooks";
 
-const Navigation = ({getAllBooks}) => {
+const Navigation = ({ getAllBooks }) => {
+  const [value, setValue] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    getAllBooks(value);
+  };
 
-    const [value,setValue] = useState("");
+  const handleInput = (e) => {
+    setValue(e.target.value);
+  };
 
+  return (
+    <Nav>
+      <WrapperNavigation>
+        <form onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            placeholder="Search for the books"
+            value={value}
+            onChange={handleInput}
+          />
+        </form>
+      </WrapperNavigation>
+    </Nav>
+  );
+};
 
-    const handleSubmit = e =>{
-        e.preventDefault()
-        getAllBooks(value);
-    }
+const mapDispatchToProps = (dispatch) => ({
+  getAllBooks: (item) => dispatch(getAllBooks(item)),
+});
 
-    const handleInput = e =>{
-        setValue(e.target.value);
-        
-    }
+const ConectedApp = connect(null, mapDispatchToProps)(Navigation);
 
-    return ( 
-        <Nav>
-            
-            <WrapperNavigation>
-                <form onSubmit={handleSubmit}>
-                    <Input type="text" placeholder="Search for the books" value={value} onChange = {handleInput}/>
-                </form>
-            </WrapperNavigation>
-        </Nav>
-     );
-}
-
-const mapDispatchToProps = dispatch =>({
-    getAllBooks: (item) => dispatch(getAllBooks(item))
-  })
-  
-  
-  const ConectedApp = connect(null,mapDispatchToProps)(Navigation);
-
-
- 
 export default ConectedApp;

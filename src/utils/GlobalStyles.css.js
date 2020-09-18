@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components'
-import { normalize } from 'styled-normalize'
+import { createGlobalStyle } from "styled-components";
+import { normalize } from "styled-normalize";
 
- const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
     ${normalize}
 
     *{
@@ -11,7 +11,7 @@ import { normalize } from 'styled-normalize'
 
     body{
         background-image: url("bgc.jpg");
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     ul{
@@ -24,4 +24,4 @@ import { normalize } from 'styled-normalize'
     }
  `;
 
- export default GlobalStyle;
+export default GlobalStyle;
