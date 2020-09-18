@@ -11,6 +11,7 @@ https://sid2602.github.io/Bookstore/
 ## Technologies
 
 - React 16.13.1
+- React Hooks
 - Redux 4.0.5
 - Gsap 3.2.6
 - Style Components 5.1.0
